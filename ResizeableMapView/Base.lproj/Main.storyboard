@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ResizeableMapView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQD-89-vZL" userLabel="Container">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ekV-1R-ysT">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    </mapView>
+                                    <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-2O-42e" userLabel="Drag View">
+                                        <rect key="frame" x="0.0" y="256" width="600" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="naP-UX-HAK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ekV-1R-ysT" secondAttribute="trailing" id="7gR-4x-fHh"/>
+                                    <constraint firstItem="ekV-1R-ysT" firstAttribute="top" secondItem="OQD-89-vZL" secondAttribute="top" id="83D-na-RYC"/>
+                                    <constraint firstAttribute="height" constant="300" id="JQk-6e-mR9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ekV-1R-ysT" secondAttribute="bottom" id="LcH-G5-Qui"/>
+                                    <constraint firstItem="ekV-1R-ysT" firstAttribute="leading" secondItem="OQD-89-vZL" secondAttribute="leading" id="ROQ-mb-q7b"/>
+                                    <constraint firstItem="nwB-2O-42e" firstAttribute="leading" secondItem="OQD-89-vZL" secondAttribute="leading" id="h8L-ZU-GwL"/>
+                                    <constraint firstAttribute="trailing" secondItem="nwB-2O-42e" secondAttribute="trailing" id="iKk-NU-GbV"/>
+                                    <constraint firstAttribute="bottom" secondItem="nwB-2O-42e" secondAttribute="bottom" id="mbr-uW-RS7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OQD-89-vZL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="M1R-gV-95G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OQD-89-vZL" secondAttribute="trailing" constant="-16" id="TEn-JP-Ich"/>
+                            <constraint firstItem="OQD-89-vZL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="fbR-Xh-AbN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerHeightConstraint" destination="JQk-6e-mR9" id="JpX-gc-aX2"/>
+                        <outlet property="containerView" destination="OQD-89-vZL" id="3bN-75-Wqm"/>
+                        <outlet property="dragView" destination="nwB-2O-42e" id="3Sf-R3-zdA"/>
+                        <outlet property="mapView" destination="ekV-1R-ysT" id="vEK-y0-GNN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
